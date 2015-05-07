@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="eea7f454-0bb3-40e2-b85a-352d82464013" name="Rooms" linkedPackageId="7fdbcb01-f886-48c6-80c4-5a9441f95550" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="01bcbf2c-5952-4914-b59a-b119b2ac5cec" name="Room" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="22e564bd-18bc-4844-b329-f7e0069b9905" />
+        <suppliersInternal>
+          <interfaceRealization Id="2a010c22-09b9-48fc-b027-d831f3bc60cf">
+            <interfaceMoniker Id="2dc3fd01-cc66-4da4-a263-b623b021414a" LastKnownName="Roomnable" />
+            <elementDefinition Id="46b8dfb3-896a-4699-9aa3-be825e3aa1dd" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="fe877af3-fdb0-4ed7-be45-e8ea6d49293a" isDerived="false" sourceEndRoleName="Room" targetEndRoleName="Contactable" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="c178c180-33d6-4317-bbd0-122cd7c3528b" LastKnownName="Contactable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5b44fc8c-90ef-4ef5-aa5d-9e316a056ce6" name="Room" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="b50c0e02-df1d-4940-b182-40ef1cf7e882" name="Lower" value="1">
+                      <elementDefinition Id="b0c209e4-f264-44ee-8be0-e9c7919db662" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ebcc2860-0bfb-4099-9c8c-5e7470700557" name="Upper" value="1">
+                      <elementDefinition Id="d5034f25-d3e8-4df6-991c-26f6e25b069f" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="3f938fbd-a62b-4b5a-9e88-cdb6bf9bc1eb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="19c49337-433b-4e2b-9cb0-cc15b6c8d807" name="Contactable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="29294b95-3d35-4585-8364-01680c74344a" name="Lower" value="0">
+                      <elementDefinition Id="e5140e21-311f-40f0-ae9c-85c2c2dfa85c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="10fa10c6-c1a9-4e71-896d-3122711a39c9" name="Upper" value="*">
+                      <elementDefinition Id="8b165039-c013-4021-b8a8-6cc2fe0915a9" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="45923a8d-8b46-4257-bfcf-d02d0534df62" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a7ad4c47-2d12-4c52-bb6e-0fb9bb44f549" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="9fcc8d6e-ca22-4673-9ebd-eaeda63e70e7" name="ArrayList&lt;Contactable&gt; contacts" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d1d3253f-7f05-4f42-ba90-548ee7df9a08" />
+          </property>
+          <property Id="07d85e39-2639-43e3-b712-3323ded30e7a" name="Contactable owner" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3a5488d7-9544-4eee-9715-371d1255ae82" />
+          </property>
+          <property Id="a33d7c4a-e1a2-4e79-ad66-d89a57c0e573" name="String name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="42897112-5385-472d-95d7-05a530788b75" />
+          </property>
+          <property Id="60a6c81e-84ca-42ce-927d-3baa55c6b459" name="String description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="72dd03ba-7569-49cc-ab57-88945d9fb6dc" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="715fa317-b107-40f2-a153-b2a38be3c47d" name="void addContact" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8f3353ca-684e-436a-93bd-1fc821294cb5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6c00b2f8-4ccd-46ad-9120-bf972dba806b" name="Contactable contact" direction="In" isUnique="false">
+                  <elementDefinition Id="52c26290-59bf-4bb8-ad32-e6578f60ade8" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a6fd61d5-6c4f-4685-9bfc-2d4f0e8a849e" name="void updateRoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="646538ef-ac63-483c-8ca9-816e90561e57" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2cd42878-e646-4798-ac0a-8088df582bb6" name="Roomnable room" direction="In" isUnique="false">
+                  <elementDefinition Id="aa5c8d36-adfb-4765-80a1-3b1b2fd30561" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="64e374cb-4811-4e19-90d3-4d71dc8d7f65" name="void removeContact" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f553f6c9-fdca-4f32-9411-bb75ff574ff5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8b34b5cb-31cc-4c45-ace4-6519720e13d4" name="String nickName" direction="In" isUnique="false">
+                  <elementDefinition Id="70188723-56f9-4e74-8776-85de39b4e67d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b8f395a6-fc7b-4c5e-bfad-cd338e808976" name="String getName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d579eb57-6447-486d-b8be-3326a2307566" />
+          </operation>
+          <operation Id="327144b2-90d1-445d-87c4-a333992d7c60" name="String getDescription" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="83e38699-dd97-423c-b2a6-8fbece0ff689" />
+          </operation>
+          <operation Id="ae5ce113-5c58-4372-b65f-34adf3b9a467" name="Contactable getOwner" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2ff01f15-4115-4ca0-95b8-6121b38cb98a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="c178c180-33d6-4317-bbd0-122cd7c3528b" name="Contactable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ff1393eb-e9cb-418d-a4cd-09c2ab0d45d4" />
+        <ownedOperations>
+          <operation Id="187f6535-d4c5-4d07-961c-23699a020b56" name="void sendMessage" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6d733a7f-d1ed-4e89-83c1-7833aaa6c420" />
+          </operation>
+          <operation Id="bdb71d74-5eb5-47aa-b068-e54344d85323" name="void sendPrivateMessage" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ce300ce0-f76d-4a1c-acc3-acab7846308b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f774aac8-f8a5-48a0-ae30-9360ee74ce4e" name="contactable to" direction="In" isUnique="false">
+                  <elementDefinition Id="34f02dc0-1b4f-4a98-92b3-5fe6caca4419" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ca596af1-bd1f-4f87-869a-b5d5ced6dc04" name="User" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="92bf422d-f0f9-4f3d-8144-2320796d0834" />
+        <suppliersInternal>
+          <interfaceRealization Id="35feb751-bf98-4703-b131-0c3cc6c899fc">
+            <interfaceMoniker Id="c178c180-33d6-4317-bbd0-122cd7c3528b" LastKnownName="Contactable" />
+            <elementDefinition Id="72dc7164-6466-46b6-a49e-8dc26b7553f1" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="af6d1f93-6a38-4b08-9a7d-fe2cffa691a5" name="nickname" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5cb7f397-e6d6-4a37-b6d8-56337164111c" />
+          </property>
+          <property Id="337ec2d6-8d91-42c5-b75d-a47fddc7684d" name="ip" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de042869-62cc-4609-b72e-e3177eef0c69" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e01394bc-082e-43b4-830c-3261903d5052" name="void sendMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d12c268c-3845-48f4-8f1d-e6906de03320" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="17fcc24a-3146-46a3-9ea0-0bd36d9ade91" name="String message" direction="In" isUnique="false">
+                  <elementDefinition Id="95611aef-53fe-4195-965a-7270d6462c9d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f93215ed-b08c-4cd4-b8b1-fb6007c2a18d" name="void dispose" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="617b23be-e221-4961-9341-f2727cfc1f43" />
+          </operation>
+          <operation Id="148bd422-0f27-44ed-87fe-01613b607421" name="void sendPrivateMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="28633bbe-61d9-427c-889d-29a370de6577" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f3062372-d681-4f40-b67d-ad8c607dda3e" name="contactable to" direction="In" isUnique="false">
+                  <elementDefinition Id="99d058c8-41c1-477a-83e4-71ac031b8c4d" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ea608021-cb84-4e71-8268-17c19f186d4c" name="String message" direction="In" isUnique="false">
+                  <elementDefinition Id="48127f18-b71e-4ed8-85e7-9514bc0d2cae" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="2dc3fd01-cc66-4da4-a263-b623b021414a" name="Roomnable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="78b52624-8292-4948-b799-b8a4cb7e1cbd" />
+        <ownedOperations>
+          <operation Id="46d138a9-505d-4bdd-b2cc-88071c0b2a6c" name="void addContact" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1195588d-e84a-41b8-af12-26d3093a9fdd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="96570e05-615e-426a-8632-415957ffdf62" name="Contactable contact" direction="In" isUnique="false">
+                  <elementDefinition Id="90f80899-c83b-4a8c-9adc-87e01135a965" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="49be786c-2acd-4b2f-b1c8-9a627a206612" name="void removeContact" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="30707273-a258-4c51-977c-349082f57ef7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e91253e2-cc9d-47a4-aa1d-3966307f8ee1" name="String nickName" direction="In" isUnique="false">
+                  <elementDefinition Id="a6bf7af2-fc4e-4886-8d55-b131f66b81ce" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dae485e2-686b-4c7c-8fe2-c8b0255d32e7" name="void updateRoom" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="59dfb24c-1706-4c3f-a1fa-231c5090c0ba" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9cc769f0-d09e-4cdc-9ff8-8c11583b3ee1" name="Roomnable room" direction="In" isUnique="false">
+                  <elementDefinition Id="2da5935a-fe0d-4f21-8fc9-75c54a44f2ac" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="605a8843-f98f-46a5-9085-9aec8fc5c5fb" name="String getName" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eb5cd8b6-aeb4-4b5e-8563-dfbfc0993224" />
+          </operation>
+          <operation Id="12b817ca-6b70-44c2-a8c7-1491d9a1e7eb" name="String getDescription" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3acc12bc-6721-4c6c-a733-be58ebd89f0e" />
+          </operation>
+          <operation Id="c8db0704-7142-4ae0-b895-90a1ddef62b0" name="Contactable getOwner" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="35d2e13d-fe71-4323-8a4b-ade6e500d2fb" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8042ab16-f733-4266-b67b-6e391e0dbef4" name="Lobby" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dd0a90af-51dd-48df-ae8f-78d02befaee5" />
+        <targetEnds>
+          <association Id="22a350ba-be47-48e0-88cb-dd0dbe311ed5" isDerived="false" sourceEndRoleName="Lobby" targetEndRoleName="Roomnable" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="2dc3fd01-cc66-4da4-a263-b623b021414a" LastKnownName="Roomnable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e22e1aef-0a76-44af-b033-28e405c76b64" name="Lobby" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="e08067dd-4974-441f-a97a-35078755c82e" name="Lower" value="1">
+                      <elementDefinition Id="aa870cbf-2114-4025-8de2-acbe09bf8b0b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f913365a-bf14-4a6d-8f50-9b4a003c6d0b" name="Upper" value="1">
+                      <elementDefinition Id="7fc44f1d-8d0b-42d5-856c-743a2dba37bf" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b0c3158a-c98e-441e-a2e2-f5c136e00931" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="58ed3887-142d-437c-840e-83e074b69f77" name="Roomnable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="203bfcdf-7271-4109-b143-27338397a0dc" name="Lower" value="0">
+                      <elementDefinition Id="15529304-b979-4acf-8f99-567cd33b578a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="eb0fbea7-011b-47f4-92af-6dc752f603e2" name="Upper" value="*">
+                      <elementDefinition Id="14758b53-0a94-43fa-9a60-fada5461b66e" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="73fb30e4-5a48-4a5b-a75d-3f6e60b090fd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="83457b06-fba4-4611-a667-180567fade46" />
+          </association>
+          <association Id="9e84c96c-5c93-4615-9934-60c9a0688aef" isDerived="false" sourceEndRoleName="Lobby" targetEndRoleName="Contactable" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="c178c180-33d6-4317-bbd0-122cd7c3528b" LastKnownName="Contactable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5c72a5d5-5dbb-439d-bb24-8a6bf27b2c2a" name="Lobby" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="7a470446-bf2f-4aaf-9651-a3cb20ad47d6" name="Lower" value="1">
+                      <elementDefinition Id="408b3ac2-effb-4cac-9fba-2b036f747149" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4f892bed-15dd-4c5e-8cd9-43d2b676052d" name="Upper" value="1">
+                      <elementDefinition Id="3c94704c-829a-491f-9a6a-031067eb4cb1" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="6e5324e8-4088-4456-811c-2646312044ca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4a53e2c6-c343-416c-a6de-95e330416748" name="Contactable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="4006ff52-e2af-4b6d-8ad2-03c4489091ac" name="Lower" value="0">
+                      <elementDefinition Id="46a10ed7-5f34-45c1-894f-0e88df962bc9" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="2ae4ac13-77b0-47b4-88e7-514679a857a4" name="Upper" value="*">
+                      <elementDefinition Id="2f875633-b8b8-4adc-9024-a53279cc0a22" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="077c01ee-ac58-4557-ab18-8024826aafa5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="61ec3a23-85cb-4135-8e8d-a213e94eba04" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="700f8f57-9623-4bf7-9cb4-170ceb7a3258" name="ArrayList&lt;Roomnable&gt; rooms" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8c02cd0b-c402-44f2-af1e-444bd9579268" />
+          </property>
+          <property Id="5dad601e-d210-46d5-8641-808e91a08077" name="ArrayList&lt;Contactable&gt; onlines" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f05f1903-a684-406e-a341-0b549e116d0d" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1243b400-4980-4cf2-ae58-18315622e643" name="ArrayList&lt;Contactable&gt; returnOnlines" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f6217793-f463-4252-a407-84a90e68e1c7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="97f41fd5-083f-4611-962e-c750ccc4edaf" name="String client" direction="In" isUnique="false">
+                  <elementDefinition Id="0137a9e7-2719-45f7-85db-3d5d217b1778" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5b882170-e2c2-40be-899f-58261b973e8c" name="ArrayList&lt;Roomnable&gt; returnRooms" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ca997557-d918-4ef3-acd9-7ba2023ec49b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6b969a0f-d7ea-4b7f-986e-4771a487755f" name="String client" direction="In" isUnique="false">
+                  <elementDefinition Id="db01ab34-e069-4996-aa2c-f133e6a65e73" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="30c9fbf3-e289-4536-b0c3-da26bf6e6c19" name="void registerUser" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9b114b05-8a08-4940-92d8-4802f3ed3343" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="11ac69e2-319d-4f3f-8487-368b8012ffc5" name="Contactable contact" direction="In" isUnique="false">
+                  <elementDefinition Id="ca5e3734-c35c-48ff-a7ee-1e763150dfde" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b8eca78c-415c-4a62-b722-5e0bf0be56f3" name="void addRoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="975779ee-828c-401c-a187-2d8f6f9e56a6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="633c90f8-b679-473b-b795-fa1b2720722b" name="Roomnable room" direction="In" isUnique="false">
+                  <elementDefinition Id="570db129-7bd4-4492-9c06-cb9cd37d1786" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="042c08f8-e159-4fdc-b63f-f71b56518ee6" name="void removeRoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9978c9e0-9a5e-42b7-a543-6cefb53cb736" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cc2cfaba-4015-411f-b7a0-8c680c53b577" name="String room" direction="In" isUnique="false">
+                  <elementDefinition Id="0f6206ad-b4dc-49ab-bc5d-6f9a53e952fa" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="7fdbcb01-f886-48c6-80c4-5a9441f95550" name="Chat">
+    <elementDefinition Id="1e8a3638-a27f-4405-a801-8af49c7319b6" />
+    <profileInstances>
+      <packageHasProfileInstances Id="b1d928d3-75c6-478e-8456-87bff287ba77">
+        <profileInstance Id="10c62c12-dfe6-4893-b18c-95eb81f07e7b" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="0d59ae0e-e729-44c6-93a3-6bbaa9ae0272">
+        <profileInstance Id="c76f62ef-aaea-4d99-ab0a-55ee77a1754e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

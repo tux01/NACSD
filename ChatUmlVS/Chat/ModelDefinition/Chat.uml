@@ -1,0 +1,1371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1e8a3638-a27f-4405-a801-8af49c7319b6"
+  name="Chat" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5345eb0e-d33b-42ee-b8d3-aed19cb7b78c"
+        name="ServerSocket"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1c8f7a07-3f1a-4b68-b121-f661d26a686a"
+        name="ServerChat"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="18b53fee-1f3d-411e-b3b9-0dfe124df830"
+            isDerived="false"
+            sourceEndRoleName="ServerChat"
+            targetEndRoleName="SocketFactory"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9c6ab6f2-d73e-4ff5-a473-e052f3c076f0"
+              LastKnownName="SocketFactory"
+              LastKnownLocation="Chat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="94e88297-5a1d-49b6-9f9d-d0f1cc9f8375"
+                  name="ServerChat"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e9934243-39d1-46ab-a217-b296396d8407"
+                  name="SocketFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="e9098f9f-9a1a-44b4-a44b-6cf53c77cc4c"
+            name="void main"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a95a32b-c559-489f-a889-a62a3ab81ab5"
+                  name="string[] args"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9c6ab6f2-d73e-4ff5-a473-e052f3c076f0"
+        name="SocketFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="7d641b9e-0e66-4df1-8f12-94f06ab5ee8f"
+            isDerived="false"
+            sourceEndRoleName="SocketFactory"
+            targetEndRoleName="Socketable"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="3d6b07d2-18da-4a49-b994-44f46de862de"
+              LastKnownName="Socketable"
+              LastKnownLocation="Chat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e3a14d0d-f1db-418e-ac5d-94f95672fbfa"
+                  name="SocketFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9621cf86-5f76-45be-8f14-701d749858c7"
+                  name="Socketable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6687e452-09cd-48fb-b226-f840c2e02a34"
+            isDerived="false"
+            sourceEndRoleName="SocketFactory"
+            targetEndRoleName="Type"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="ffb36e1e-c623-475a-b21d-1098423a1739"
+              LastKnownName="Type"
+              LastKnownLocation="Chat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2af6c736-5e67-4572-b21f-7efe11cfb73f"
+                  name="SocketFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a1a34ad0-471c-469b-953a-06b858237f22"
+                  name="Type"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c50a8497-7c46-4335-a041-8b8639747684"
+            isDerived="false"
+            sourceEndRoleName="SocketFactory"
+            targetEndRoleName="Protocol"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="1f7c495d-3858-4809-8f74-2554539f5d2e"
+              LastKnownName="Protocol"
+              LastKnownLocation="Chat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="19154371-466c-488a-b5d5-2d437b75e632"
+                  name="SocketFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8265cb3f-283e-491d-a2e1-f9fe03042c0e"
+                  name="Protocol"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="d87278cc-95e3-4714-b24f-aa98587b78fc"
+            name="Socketabke createSocket"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d87452a5-b136-4602-a17e-c010779ae135"
+                  name="int port"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="334d77ac-de46-42ab-8ceb-e8a0e5cba02e"
+                  name="Type type"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3d6b07d2-18da-4a49-b994-44f46de862de"
+        name="Socketable"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="0483258c-11bb-4058-8588-ed13540e08c1"
+            name="void start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1bbf1817-6a7b-4e69-98a9-d39ab9913432"
+        name="SenderTcp"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="8a19dc69-7308-45ca-950e-3e849ea00c09">
+            <interfaceMoniker
+              Id="3d6b07d2-18da-4a49-b994-44f46de862de"
+              LastKnownName="Socketable"
+              LastKnownLocation="Chat.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="57eff6ea-1394-4ab9-b620-93b1da63509a"
+            name="void start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0b3724d8-d25c-4d62-83c6-4eaa027fb565"
+        name="Room"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="62882538-af0f-4ad7-93f4-cbf1e0289509"
+            name="ArrayList&lt;Type&gt; type"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4fcb1469-fe89-4f81-8b4e-087a49febb27"
+            name="boolean add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="acb404c7-c996-40e7-a988-bd47fe95ab1b"
+                  name="Type type"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="54a062a6-8055-410e-bdc0-c8d086b2580a"
+            name="boolean delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e139171b-6e68-4205-b6ab-b583f2b5b702"
+            name="void dispose"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="04939fa6-3202-4174-88ae-a7c2093bdec8"
+        name="Type"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b752f3ad-3371-4034-a824-b532b7de788f"
+            isDerived="false"
+            sourceEndRoleName="Type"
+            targetEndRoleName="Room"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0b3724d8-d25c-4d62-83c6-4eaa027fb565"
+              LastKnownName="Room"
+              LastKnownLocation="Chat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e5d1359-7630-4596-a8de-364266768300"
+                  name="Type"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ed22c2a-3eb9-4984-9cb6-628d41a83f09"
+                  name="Room"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperations>
+          <operation
+            Id="9cc4976a-1315-4a43-9f47-d458497adb0d"
+            name="void sendMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0c2ba8d4-3443-4fad-bd02-e423d00b9c76"
+            name="void remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="28f11527-7a1d-41d8-9a50-fa9ae46325a0"
+        name="User"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="d1494f90-b5da-470e-bd4e-85711811f3ea">
+            <interfaceMoniker
+              Id="04939fa6-3202-4174-88ae-a7c2093bdec8"
+              LastKnownName="Type"
+              LastKnownLocation="Chat.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="18414682-536a-4b88-8e9b-386837dc8870"
+            name="void remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5689ed60-bda4-49ff-84e8-8c6da968f91d"
+            name="void sendMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="968b28db-cb03-4c29-9b97-e7edbcc92571"
+        name="Group"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="32e3671a-6378-4aea-8844-f87c582def6d">
+            <interfaceMoniker
+              Id="04939fa6-3202-4174-88ae-a7c2093bdec8"
+              LastKnownName="Type"
+              LastKnownLocation="Chat.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f050bd30-60c9-472a-a165-2ec40498f172"
+            name="void remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="091e2677-0fb4-401f-93f1-d17ea3f133da"
+            name="void sendMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2c32777a-da5e-43ea-b12b-625d78383342"
+        name="Process"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="52aded69-2fc4-470d-98f5-3c43d4b4e418"
+            isDerived="false"
+            sourceEndRoleName="Process"
+            targetEndRoleName="SocketFactory"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9c6ab6f2-d73e-4ff5-a473-e052f3c076f0"
+              LastKnownName="SocketFactory"
+              LastKnownLocation="Chat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6a41aaf-160d-4d15-b61f-630ed38a66a3"
+                  name="Process"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b59bdbd8-aea0-4a1a-8b7f-c1274462b659"
+                  name="SocketFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="aa81fec2-22d0-4497-8862-66185563e9ca"
+            name="void main"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3f5412b3-135d-47c9-899d-851812857800"
+                  name="String[] args"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="22e564bd-18bc-4844-b329-f7e0069b9905"
+        name="Room"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="46b8dfb3-896a-4699-9aa3-be825e3aa1dd">
+            <interfaceMoniker
+              Id="78b52624-8292-4948-b799-b8a4cb7e1cbd"
+              LastKnownName="Roomnable"
+              LastKnownLocation="Chat.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="a7ad4c47-2d12-4c52-bb6e-0fb9bb44f549"
+            isDerived="false"
+            sourceEndRoleName="Room"
+            targetEndRoleName="Contactable"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="ff1393eb-e9cb-418d-a4cd-09c2ab0d45d4"
+              LastKnownName="Contactable"
+              LastKnownLocation="Chat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f938fbd-a62b-4b5a-9e88-cdb6bf9bc1eb"
+                  name="Room"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b0c209e4-f264-44ee-8be0-e9c7919db662"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d5034f25-d3e8-4df6-991c-26f6e25b069f"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="45923a8d-8b46-4257-bfcf-d02d0534df62"
+                  name="Contactable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e5140e21-311f-40f0-ae9c-85c2c2dfa85c"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8b165039-c013-4021-b8a8-6cc2fe0915a9"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="d1d3253f-7f05-4f42-ba90-548ee7df9a08"
+            name="ArrayList&lt;Contactable&gt; contacts"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="3a5488d7-9544-4eee-9715-371d1255ae82"
+            name="Contactable owner"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="42897112-5385-472d-95d7-05a530788b75"
+            name="String name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="72dd03ba-7569-49cc-ab57-88945d9fb6dc"
+            name="String description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8f3353ca-684e-436a-93bd-1fc821294cb5"
+            name="void addContact"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="52c26290-59bf-4bb8-ad32-e6578f60ade8"
+                  name="Contactable contact"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="646538ef-ac63-483c-8ca9-816e90561e57"
+            name="void updateRoom"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa5c8d36-adfb-4765-80a1-3b1b2fd30561"
+                  name="Roomnable room"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f553f6c9-fdca-4f32-9411-bb75ff574ff5"
+            name="void removeContact"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="70188723-56f9-4e74-8776-85de39b4e67d"
+                  name="String nickName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d579eb57-6447-486d-b8be-3326a2307566"
+            name="String getName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="83e38699-dd97-423c-b2a6-8fbece0ff689"
+            name="String getDescription"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2ff01f15-4115-4ca0-95b8-6121b38cb98a"
+            name="Contactable getOwner"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ff1393eb-e9cb-418d-a4cd-09c2ab0d45d4"
+        name="Contactable"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="6d733a7f-d1ed-4e89-83c1-7833aaa6c420"
+            name="void sendMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ce300ce0-f76d-4a1c-acc3-acab7846308b"
+            name="void sendPrivateMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="34f02dc0-1b4f-4a98-92b3-5fe6caca4419"
+                  name="contactable to"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="92bf422d-f0f9-4f3d-8144-2320796d0834"
+        name="User"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="72dc7164-6466-46b6-a49e-8dc26b7553f1">
+            <interfaceMoniker
+              Id="ff1393eb-e9cb-418d-a4cd-09c2ab0d45d4"
+              LastKnownName="Contactable"
+              LastKnownLocation="Chat.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="5cb7f397-e6d6-4a37-b6d8-56337164111c"
+            name="nickname"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="de042869-62cc-4609-b72e-e3177eef0c69"
+            name="ip"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d12c268c-3845-48f4-8f1d-e6906de03320"
+            name="void sendMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="95611aef-53fe-4195-965a-7270d6462c9d"
+                  name="String message"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="617b23be-e221-4961-9341-f2727cfc1f43"
+            name="void dispose"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="28633bbe-61d9-427c-889d-29a370de6577"
+            name="void sendPrivateMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="99d058c8-41c1-477a-83e4-71ac031b8c4d"
+                  name="contactable to"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="48127f18-b71e-4ed8-85e7-9514bc0d2cae"
+                  name="String message"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6a9aaf9f-eb45-4122-932c-f0a3955c291f"
+        name="Group"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="00a1b6c4-a376-4182-b4df-ab617348e33c">
+            <interfaceMoniker
+              Id="ff1393eb-e9cb-418d-a4cd-09c2ab0d45d4"
+              LastKnownName="Contactable"
+              LastKnownLocation="Chat.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c56a509b-9a22-4c8c-87a8-46bf6158249b"
+            name="void remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f84ee34f-908b-47ad-a5a5-ae48fbc78f6c"
+            name="void sendMessage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="78b52624-8292-4948-b799-b8a4cb7e1cbd"
+        name="Roomnable"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="1195588d-e84a-41b8-af12-26d3093a9fdd"
+            name="void addContact"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="90f80899-c83b-4a8c-9adc-87e01135a965"
+                  name="Contactable contact"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="30707273-a258-4c51-977c-349082f57ef7"
+            name="void removeContact"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a6bf7af2-fc4e-4886-8d55-b131f66b81ce"
+                  name="String nickName"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="59dfb24c-1706-4c3f-a1fa-231c5090c0ba"
+            name="void updateRoom"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2da5935a-fe0d-4f21-8fc9-75c54a44f2ac"
+                  name="Roomnable room"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eb5cd8b6-aeb4-4b5e-8563-dfbfc0993224"
+            name="String getName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3acc12bc-6721-4c6c-a733-be58ebd89f0e"
+            name="String getDescription"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="35d2e13d-fe71-4323-8a4b-ade6e500d2fb"
+            name="Contactable getOwner"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dd0a90af-51dd-48df-ae8f-78d02befaee5"
+        name="Lobby"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="83457b06-fba4-4611-a667-180567fade46"
+            isDerived="false"
+            sourceEndRoleName="Lobby"
+            targetEndRoleName="Roomnable"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="78b52624-8292-4948-b799-b8a4cb7e1cbd"
+              LastKnownName="Roomnable"
+              LastKnownLocation="Chat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b0c3158a-c98e-441e-a2e2-f5c136e00931"
+                  name="Lobby"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="aa870cbf-2114-4025-8de2-acbe09bf8b0b"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7fc44f1d-8d0b-42d5-856c-743a2dba37bf"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="73fb30e4-5a48-4a5b-a75d-3f6e60b090fd"
+                  name="Roomnable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="15529304-b979-4acf-8f99-567cd33b578a"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="14758b53-0a94-43fa-9a60-fada5461b66e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="61ec3a23-85cb-4135-8e8d-a213e94eba04"
+            isDerived="false"
+            sourceEndRoleName="Lobby"
+            targetEndRoleName="Contactable"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="ff1393eb-e9cb-418d-a4cd-09c2ab0d45d4"
+              LastKnownName="Contactable"
+              LastKnownLocation="Chat.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e5324e8-4088-4456-811c-2646312044ca"
+                  name="Lobby"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="408b3ac2-effb-4cac-9fba-2b036f747149"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="3c94704c-829a-491f-9a6a-031067eb4cb1"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="077c01ee-ac58-4557-ab18-8024826aafa5"
+                  name="Contactable"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="46a10ed7-5f34-45c1-894f-0e88df962bc9"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2f875633-b8b8-4adc-9024-a53279cc0a22"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="8c02cd0b-c402-44f2-af1e-444bd9579268"
+            name="ArrayList&lt;Roomnable&gt; rooms"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f05f1903-a684-406e-a341-0b549e116d0d"
+            name="ArrayList&lt;Contactable&gt; onlines"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f6217793-f463-4252-a407-84a90e68e1c7"
+            name="ArrayList&lt;Contactable&gt; returnOnlines"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0137a9e7-2719-45f7-85db-3d5d217b1778"
+                  name="String client"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ca997557-d918-4ef3-acd9-7ba2023ec49b"
+            name="ArrayList&lt;Roomnable&gt; returnRooms"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="db01ab34-e069-4996-aa2c-f133e6a65e73"
+                  name="String client"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9b114b05-8a08-4940-92d8-4802f3ed3343"
+            name="void registerUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ca5e3734-c35c-48ff-a7ee-1e763150dfde"
+                  name="Contactable contact"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="975779ee-828c-401c-a187-2d8f6f9e56a6"
+            name="void addRoom"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="570db129-7bd4-4492-9c06-cb9cd37d1786"
+                  name="Roomnable room"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9978c9e0-9a5e-42b7-a543-6cefb53cb736"
+            name="void removeRoom"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f6206ad-b4dc-49ab-bc5d-6f9a53e952fa"
+                  name="String room"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f74ff87c-aabb-47a8-ac54-d7d912235ab0"
+        name="ReceiverTcp"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="eafbc50a-29ff-4bf9-80d7-3042538afd8d">
+            <interfaceMoniker
+              Id="3d6b07d2-18da-4a49-b994-44f46de862de"
+              LastKnownName="Socketable"
+              LastKnownLocation="Chat.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="33231121-9019-415d-ba78-31512cd55978"
+            name="void start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="ffb36e1e-c623-475a-b21d-1098423a1739"
+        name="Type"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="79b3e39b-1779-4e32-ab15-0e6da485553c"
+            name="SENDER" />
+          <enumerationLiteral
+            Id="7c61ab6d-4197-476f-8175-8e39729690c7"
+            name="RECEIVER" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="1f7c495d-3858-4809-8f74-2554539f5d2e"
+        name="Protocol"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="327591f7-f303-4b78-8551-cda54777f93b"
+            name="TCP" />
+          <enumerationLiteral
+            Id="13156459-ca74-4c44-8658-9a4714414146"
+            name="UDP" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

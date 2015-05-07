@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="aff6af90-ede1-4167-a780-dff49ee15554" name="Chat" linkedPackageId="c46e3fd6-d4cc-431c-bd58-79cfc03e5e1f" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="47a3607d-7b3a-4e75-b694-9793ad88645f" name="ServerChat" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1c8f7a07-3f1a-4b68-b121-f661d26a686a" />
+        <targetEnds>
+          <association Id="fb125fc9-8386-4e0a-9b7e-b6d6e4e9b836" isDerived="false" sourceEndRoleName="ServerChat" targetEndRoleName="SocketFactory" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ad2ec692-1ebd-4387-9cf7-34d067b3594f" LastKnownName="SocketFactory" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a822ac5-3909-45db-8cc6-3f041c1da3cf" name="ServerChat" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="94e88297-5a1d-49b6-9f9d-d0f1cc9f8375" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d8afeb9e-83ea-4c70-a7b7-4871ffe000fe" name="SocketFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e9934243-39d1-46ab-a217-b296396d8407" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="18b53fee-1f3d-411e-b3b9-0dfe124df830" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="4fdced12-f0ff-4eab-9aee-f7bd0f2190c7" name="void main" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e9098f9f-9a1a-44b4-a44b-6cf53c77cc4c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0c922a4f-3ff1-4313-8363-5e4cd267f7cc" name="string[] args" direction="In" isUnique="false">
+                  <elementDefinition Id="7a95a32b-c559-489f-a889-a62a3ab81ab5" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ad2ec692-1ebd-4387-9cf7-34d067b3594f" name="SocketFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9c6ab6f2-d73e-4ff5-a473-e052f3c076f0" />
+        <targetEnds>
+          <association Id="488bd0b5-0b01-4169-9f79-106bd41476b6" isDerived="false" sourceEndRoleName="SocketFactory" targetEndRoleName="Socketable" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="4dedf73b-1a36-4b5a-b2da-f8956d50fc73" LastKnownName="Socketable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d99f8ac6-25c4-4986-808d-9a13a94b213b" name="SocketFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e3a14d0d-f1db-418e-ac5d-94f95672fbfa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a2133300-55d5-4599-9e01-1ce33ffb8637" name="Socketable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9621cf86-5f76-45be-8f14-701d749858c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7d641b9e-0e66-4df1-8f12-94f06ab5ee8f" />
+          </association>
+          <association Id="83b48902-2c01-41be-b254-d4789b5d95ed" isDerived="false" sourceEndRoleName="SocketFactory" targetEndRoleName="Type" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="31f4e7ac-dd33-4ba4-b2b6-39742066596a" LastKnownName="Type" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="496f1974-22c0-4bc5-8dc1-609d5193bef8" name="SocketFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2af6c736-5e67-4572-b21f-7efe11cfb73f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4077ec1b-8ba7-48a0-aa31-c7bedd88c6ea" name="Type" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a1a34ad0-471c-469b-953a-06b858237f22" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6687e452-09cd-48fb-b226-f840c2e02a34" />
+          </association>
+          <association Id="fa292e3e-f2ac-4711-8fc1-9fdb76df3619" isDerived="false" sourceEndRoleName="SocketFactory" targetEndRoleName="Protocol" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="2e16c6a8-90d4-47b3-aa3a-299d0afeaf14" LastKnownName="Protocol" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2cb3cb9e-f4b3-4a61-8af8-4ca208a3b953" name="SocketFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="19154371-466c-488a-b5d5-2d437b75e632" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7184f281-cd15-4612-bf06-4fa20dd72288" name="Protocol" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8265cb3f-283e-491d-a2e1-f9fe03042c0e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c50a8497-7c46-4335-a041-8b8639747684" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="3d41ea5b-0e24-4402-9cf0-53d01e83ab99" name="Socketabke createSocket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d87278cc-95e3-4714-b24f-aa98587b78fc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7848a56b-383a-4f38-acba-41c886e3e7cd" name="int port" direction="In" isUnique="false">
+                  <elementDefinition Id="d87452a5-b136-4602-a17e-c010779ae135" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="041cc8c1-c1cf-479c-8d12-b9aeffe32692" name="Type type" direction="In" isUnique="false">
+                  <elementDefinition Id="334d77ac-de46-42ab-8ceb-e8a0e5cba02e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="4dedf73b-1a36-4b5a-b2da-f8956d50fc73" name="Socketable" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3d6b07d2-18da-4a49-b994-44f46de862de" />
+        <ownedOperations>
+          <operation Id="59a5285b-abe9-45ec-a80b-34a204d0d048" name="void start" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0483258c-11bb-4058-8588-ed13540e08c1" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6d69d163-c3ca-4a08-bb1a-759879c0c185" name="SenderTcp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1bbf1817-6a7b-4e69-98a9-d39ab9913432" />
+        <suppliersInternal>
+          <interfaceRealization Id="8254f852-6061-45a8-8eb2-c6479e7560db">
+            <interfaceMoniker Id="4dedf73b-1a36-4b5a-b2da-f8956d50fc73" LastKnownName="Socketable" />
+            <elementDefinition Id="8a19dc69-7308-45ca-950e-3e849ea00c09" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="d5115380-5850-4c54-9d67-7c2ff26f8fd8" name="void start" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="57eff6ea-1394-4ab9-b620-93b1da63509a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="611f44fe-88c7-4705-87d5-716df4864713" name="ReceiverTcp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f74ff87c-aabb-47a8-ac54-d7d912235ab0" />
+        <suppliersInternal>
+          <interfaceRealization Id="9d6bacda-a2c4-420a-8ad2-58e2b1002ccd">
+            <interfaceMoniker Id="4dedf73b-1a36-4b5a-b2da-f8956d50fc73" LastKnownName="Socketable" />
+            <elementDefinition Id="eafbc50a-29ff-4bf9-80d7-3042538afd8d" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="cd6302df-d7cc-4b53-b00c-32af706b9246" name="void start" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="33231121-9019-415d-ba78-31512cd55978" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="31f4e7ac-dd33-4ba4-b2b6-39742066596a" name="Type" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ffb36e1e-c623-475a-b21d-1098423a1739" />
+        <ownedLiterals>
+          <enumerationLiteral Id="6dc37b70-2fff-45a1-9a89-a313d4c233f7" name="SENDER">
+            <elementDefinition Id="79b3e39b-1779-4e32-ab15-0e6da485553c" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="e4860cff-f043-4f0a-bfd4-a257ff30a73e" name="RECEIVER">
+            <elementDefinition Id="7c61ab6d-4197-476f-8175-8e39729690c7" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="2e16c6a8-90d4-47b3-aa3a-299d0afeaf14" name="Protocol" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1f7c495d-3858-4809-8f74-2554539f5d2e" />
+        <ownedLiterals>
+          <enumerationLiteral Id="6d0abe54-3e32-448f-be9f-e0fc04c3d09d" name="TCP">
+            <elementDefinition Id="327591f7-f303-4b78-8551-cda54777f93b" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="42ac3f30-4390-4ed7-992a-5a3190abf200" name="UDP">
+            <elementDefinition Id="13156459-ca74-4c44-8658-9a4714414146" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="c46e3fd6-d4cc-431c-bd58-79cfc03e5e1f" name="Chat">
+    <elementDefinition Id="1e8a3638-a27f-4405-a801-8af49c7319b6" />
+    <profileInstances>
+      <packageHasProfileInstances Id="431a74d8-4682-4d24-b0f1-5fd02166fcb9">
+        <profileInstance Id="795e799e-3f5e-42f8-9333-dae9d9d7e215" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="213d53d6-36b3-4cf8-a550-e219fa72cb09">
+        <profileInstance Id="780642ba-658c-4abb-b341-c88133b83206" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
