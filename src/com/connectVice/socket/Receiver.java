@@ -5,6 +5,6 @@ public interface Receiver {
 	
 	void start();
 	void close();
-	void run(String host, int port);
+	void run(String destinationProcess, int port);
 
 }

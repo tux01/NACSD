@@ -113,7 +113,7 @@
             isAbstract="false">
             <interfaceMoniker
               Id="3d6b07d2-18da-4a49-b994-44f46de862de"
-              LastKnownName="Socketable"
+              LastKnownName="Receiver"
               LastKnownLocation="Chat.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -254,7 +254,7 @@
     <packageHasNamedElement>
       <Interface
         Id="3d6b07d2-18da-4a49-b994-44f46de862de"
-        name="Socketable"
+        name="Receiver"
         isAbstract="false"
         isLeaf="false">
         <ownedOperations>
@@ -266,36 +266,41 @@
             isAbstract="true"
             concurrency="Sequential"
             isQuery="false" />
-        </ownedOperations>
-      </Interface>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="1bbf1817-6a7b-4e69-98a9-d39ab9913432"
-        name="SenderTcp"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <suppliersInternal>
-          <interfaceRealization
-            Id="8a19dc69-7308-45ca-950e-3e849ea00c09">
-            <interfaceMoniker
-              Id="3d6b07d2-18da-4a49-b994-44f46de862de"
-              LastKnownName="Socketable"
-              LastKnownLocation="Chat.uml" />
-          </interfaceRealization>
-        </suppliersInternal>
-        <ownedOperationsInternal>
           <operation
-            Id="57eff6ea-1394-4ab9-b620-93b1da63509a"
-            name="void start"
+            Id="176767cd-8356-42a9-850f-0dfbacd13990"
+            name="void close"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
+            isAbstract="true"
             concurrency="Sequential"
             isQuery="false" />
-        </ownedOperationsInternal>
-      </class>
+          <operation
+            Id="19efd393-a224-4c73-9c5a-cfce38009c4d"
+            name="void run"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a82c6aa4-937b-4337-a792-4d5603dfadcf"
+                  name="String destinationProcess"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fa0fac57-7e49-4433-907e-b5d739b0b5d7"
+                  name="int port"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -1331,7 +1336,7 @@
             Id="eafbc50a-29ff-4bf9-80d7-3042538afd8d">
             <interfaceMoniker
               Id="3d6b07d2-18da-4a49-b994-44f46de862de"
-              LastKnownName="Socketable"
+              LastKnownName="Receiver"
               LastKnownLocation="Chat.uml" />
           </interfaceRealization>
         </suppliersInternal>
@@ -1344,6 +1349,39 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="678f7ec6-ec7d-4066-af91-f8232b72ba25"
+            name="void close"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="fbf991dc-da20-4580-8376-243a3c6a1d4f"
+            name="void run"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8deb5b07-90e7-43ce-b6c9-c54eb72a20bc"
+                  name="String destinationProcess"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1590627d-96b8-478c-bf63-faafef467e64"
+                  name="int port"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>

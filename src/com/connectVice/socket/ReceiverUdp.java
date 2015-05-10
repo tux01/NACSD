@@ -32,14 +32,14 @@ public class ReceiverUdp implements Receiver {
 	}
 	
 	//Escuta o socket para receber os dados
-	public void run(String host, int port) {
+	public void run(String destinationProcess, int port) {
 		byte[] buffer = new byte[BUFSIZE];
 		while(listenSocket!=null) {
 			DatagramPacket packet = new DatagramPacket(buffer,BUFSIZE);
 			Request r = null;
 			try {
 				listenSocket.receive(packet);
-				run(host, port, packet.getData());
+				run(destinationProcess, port, packet.getData());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -54,8 +54,8 @@ public class ReceiverUdp implements Receiver {
 		
 	}
 
-	//Envia os dados recebidos do socket para outro processo.
-	private void run(String host, int port, byte[] in) {
+	//Envia os dados recebidos do socket para outro processo
+	private void run(String destinationProcess, int port, byte[] in) {
 		// Implementar a chamada para outro processo
 	}
 	
