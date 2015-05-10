@@ -37,14 +37,9 @@ public class ReceiverUdp implements Receiver {
 			Request r = null;
 			try {
 				listenSocket.receive(packet);
-				ByteArrayInputStream in = new ByteArrayInputStream(packet.getData());
-				ObjectInputStream is = new ObjectInputStream(in);
-				r = (Request)is.readObject();
-				run(host, port, r);
+				run(host, port, packet.getData());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
 		}
@@ -56,7 +51,7 @@ public class ReceiverUdp implements Receiver {
 		
 	}
 
-	private void run(String host, int port, Request r) {
+	private void run(String host, int port, byte[] in) {
 		// Implementar a chamada para outro processo
 	}
 	
