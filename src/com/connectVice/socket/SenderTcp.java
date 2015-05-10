@@ -5,7 +5,7 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
-public class SenderTcp implements Socketable {
+public class SenderTcp implements Sender {
 	
 	private Integer port;
 	private String host;

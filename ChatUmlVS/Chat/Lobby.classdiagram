@@ -102,6 +102,9 @@
           <operation Id="ae5ce113-5c58-4372-b65f-34adf3b9a467" name="Contactable getOwner" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="2ff01f15-4115-4ca0-95b8-6121b38cb98a" />
           </operation>
+          <operation Id="12c6d632-232d-44e8-ad3d-c6b0c193f318" name="void receiveMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8e6ffe34-49e0-453c-8d45-72bc0f522f12" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -121,6 +124,9 @@
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
+          </operation>
+          <operation Id="a3770cf7-4ae4-4c37-871c-03cc7e863892" name="void receiveMessage" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fe2c6a12-b904-4363-a3ad-2a2c777ae67a" />
           </operation>
         </ownedOperations>
       </Interface>
@@ -171,6 +177,9 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="260a2276-9fa0-4625-a3c5-93d2ee48dcb8" name="void receiveMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5b3d00ca-92fe-4893-ada8-1e4e1e0caec5" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -216,6 +225,9 @@
           </operation>
           <operation Id="c8db0704-7142-4ae0-b895-90a1ddef62b0" name="Contactable getOwner" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="35d2e13d-fe71-4323-8a4b-ade6e500d2fb" />
+          </operation>
+          <operation Id="be9255ab-bb0a-47ee-9597-58478a1f61b6" name="void receiveMessage" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c1b385f1-caa7-4514-8760-e208635027ca" />
           </operation>
         </ownedOperations>
       </Interface>

@@ -7,7 +7,7 @@ import java.net.Socket;
 import com.connectVice.factory.SocketFactory;
 import com.connectVice.factory.SocketFactory.Protocol;
 import com.connectVice.factory.SocketFactory.Type;
-import com.connectVice.socket.Socketable;
+import com.connectVice.socket.Sender;
 
 public class ReceiverChat {
 
@@ -15,7 +15,7 @@ public class ReceiverChat {
 		int port = 9533;
 		String host = "";
 		
-		Socketable socketServer = SocketFactory.createSocket(port, host, Type.SENDER, Protocol.TCP);
+		Sender socketServer = SocketFactory.createSocket(port, host, Type.SENDER, Protocol.TCP);
 		
 		socketServer.start();
 

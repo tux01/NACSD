@@ -2,14 +2,14 @@ package com.connectVice.factory;
 
 import com.connectVice.socket.ReceiverTcp;
 import com.connectVice.socket.SenderTcp;
-import com.connectVice.socket.Socketable;
+import com.connectVice.socket.Sender;
 
 public class SocketFactory {
 	
 	public enum Protocol { TCP, UDP }
 	public enum Type { SENDER, RECEIVER }
 
-	public static Socketable createSocket(int port, String host ,Type type, Protocol protocol) {
+	public static Sender createSocket(int port, String host ,Type type, Protocol protocol) {
 		
 		if(type.equals(Type.RECEIVER) && protocol.equals(Protocol.TCP))
 			return new ReceiverTcp(port);

@@ -1,6 +1,6 @@
 package com.connectVice.socket;
 
-public interface Socketable {
+public interface Sender {
 
 	void start();
 	void close();

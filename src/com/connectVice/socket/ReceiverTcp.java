@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ReceiverTcp implements Socketable {
+import com.connectVice.server.Request;
+
+public class ReceiverTcp implements Receiver {
 	
 	private int port;
 	private ServerSocket server;
@@ -22,22 +24,24 @@ public class ReceiverTcp implements Socketable {
 			
 			server = new ServerSocket(this.port);
 			
-			while(true) {
-				
-				System.out.println("Preparando socket para receber dados");
-				
-				Socket client = server.accept();
-				
-				ProcessBuilder pb = new ProcessBuilder("");
-				
-				
-				
-			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public Request getRequest() {
+		System.out.println("Preparando socket para receber dados");
+		
+		try {
+			Socket client = server.accept();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		ProcessBuilder pb = new ProcessBuilder("");
 	}
 	
 	public void close() {

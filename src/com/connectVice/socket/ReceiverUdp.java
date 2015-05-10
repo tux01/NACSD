@@ -3,7 +3,7 @@ package com.connectVice.socket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
-public class ReceiverUdp implements Socketable {
+public class ReceiverUdp implements Receiver {
 	
 	private Integer port;
 	private DatagramSocket listenSocket;
