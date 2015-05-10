@@ -1,8 +1,10 @@
 package com.connectVice.socket;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.ByteBuffer;
 
 import com.connectVice.server.Request;
 
@@ -10,6 +12,7 @@ public class ReceiverTcp implements Receiver {
 	
 	private int port;
 	private ServerSocket server;
+	private static int BUFSIZE = 8192;
 	
 	public ReceiverTcp(int port) {
 		this.port = port;
@@ -31,17 +34,21 @@ public class ReceiverTcp implements Receiver {
 		
 	}
 	
-	public Request getRequest() {
+	public void run(String host, int port) {
 		System.out.println("Preparando socket para receber dados");
-		
-		try {
-			Socket client = server.accept();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		while(true)
+		{
+			try {
+				Socket client = server.accept();
+			    BufferedInputStream inFromClient = new BufferedInputStream(client.getInputStream());
+			    Request r = (Request) inFromClient;
+			    run(host, port, r);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
-		ProcessBuilder pb = new ProcessBuilder("");
 	}
 	
 	public void close() {
@@ -51,6 +58,10 @@ public class ReceiverTcp implements Receiver {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	private void run(String host, int port, Request r) {
+		//Implementar a chamada para outro processo
 	}
 
 }

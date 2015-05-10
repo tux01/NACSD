@@ -11,7 +11,7 @@ public class SenderChat {
 		int port = 9533;
 		String host = "";
 		
-		Sender socketReceiver = SocketFactory.createSocket(port, host, Type.SENDER, Protocol.TCP);
+		Sender socketReceiver = SocketFactory.createSocketSender(port, host, Type.SENDER, Protocol.TCP);
 		
 		socketReceiver.start();
 

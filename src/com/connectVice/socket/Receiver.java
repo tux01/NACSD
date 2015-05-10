@@ -6,6 +6,6 @@ public interface Receiver {
 	
 	void start();
 	void close();
-	Request getRequest();
+	void run(String host, int port);
 
 }

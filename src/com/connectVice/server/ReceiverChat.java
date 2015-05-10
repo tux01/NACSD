@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import javax.sound.midi.Receiver;
+
 import com.connectVice.factory.SocketFactory;
 import com.connectVice.factory.SocketFactory.Protocol;
 import com.connectVice.factory.SocketFactory.Type;
@@ -15,7 +17,7 @@ public class ReceiverChat {
 		int port = 9533;
 		String host = "";
 		
-		Sender socketServer = SocketFactory.createSocket(port, host, Type.SENDER, Protocol.TCP);
+		com.connectVice.socket.Receiver socketServer = SocketFactory.createSocketReceiver(port, host, Type.SENDER, Protocol.TCP);
 		
 		socketServer.start();
 
