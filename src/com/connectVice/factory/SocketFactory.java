@@ -9,17 +9,19 @@ import com.connectVice.socket.Sender;
 public class SocketFactory {
 	
 	public enum Protocol { TCP, UDP }
-	public enum Type { SENDER, RECEIVER }
+	//public enum Type { SENDER, RECEIVER }
 
-	public static Sender createSocketSender(int port, String host ,Type type, Protocol protocol) {
+	//Cria um novo SenderTCP (Factory para não instânciar diretamente na classe gerando menor acoplamento)
+	public static Sender createSocketSender(int port, String host , Protocol protocol) {
 		
-		if(type.equals(Type.SENDER) && protocol.equals(Protocol.TCP));
+		if( protocol.equals(Protocol.TCP));
 			return new SenderTcp(port, host);
 		
 	}
 	
-	public static Receiver createSocketReceiver(int port, String host ,Type type, Protocol protocol) {
-		if(type.equals(Type.RECEIVER) && protocol.equals(Protocol.TCP))
+	//Cria um novo ReceiverTCP (Factory para não instânciar diretamente na classe gerando menor acoplamento)
+	public static Receiver createSocketReceiver(int port, String host, Protocol protocol) {
+		if(protocol.equals(Protocol.TCP))
 			return new ReceiverTcp(port);
 		else
 			return new ReceiverUdp(port);

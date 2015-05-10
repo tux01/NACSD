@@ -1,24 +1,25 @@
 package com.connectVice.socket;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
 import com.connectVice.server.Request;
 
+//Classe Socket receiver em UDP
 public class ReceiverUdp implements Receiver {
 	
 	private Integer port;
 	private DatagramSocket listenSocket;
 	private static int BUFSIZE = 8192;
 	
+	//Define porta
 	public ReceiverUdp(int port) {
 		this.port = port;
 	}
 
+	//Inicia o socket;
 	@Override
 	public void start() {
 		try {
@@ -30,6 +31,7 @@ public class ReceiverUdp implements Receiver {
 		
 	}
 	
+	//Escuta o socket para receber os dados
 	public void run(String host, int port) {
 		byte[] buffer = new byte[BUFSIZE];
 		while(listenSocket!=null) {
@@ -45,12 +47,14 @@ public class ReceiverUdp implements Receiver {
 		}
 	}
 
+	//Fecha a conexão
 	@Override
 	public void close() {
-		// TODO Auto-generated method stub
+		listenSocket.close();
 		
 	}
 
+	//Envia os dados recebidos do socket para outro processo.
 	private void run(String host, int port, byte[] in) {
 		// Implementar a chamada para outro processo
 	}

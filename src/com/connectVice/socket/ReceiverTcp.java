@@ -1,25 +1,24 @@
 package com.connectVice.socket;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.ByteBuffer;
 
-import com.connectVice.server.Request;
-
+//Classe Socket via TCP
 public class ReceiverTcp implements Receiver {
 	
 	private int port;
 	private ServerSocket server;
 	private static int BUFSIZE = 8192;
 	
+	//Define porta
 	public ReceiverTcp(int port) {
 		this.port = port;
 	}
 	
 	@Override
+	//Inicia a configuração do server
 	public void start() {
 		
 		try {
@@ -35,6 +34,7 @@ public class ReceiverTcp implements Receiver {
 		
 	}
 	
+	//Ouve o socket para receber dados
 	public void run(String host, int port) {
 		System.out.println("Preparando socket para receber dados");
 		while(true)
@@ -49,7 +49,7 @@ public class ReceiverTcp implements Receiver {
 		}
 		
 	}
-	
+	//Fecha o socket server
 	public void close() {
 		try {
 			server.close();
@@ -59,6 +59,7 @@ public class ReceiverTcp implements Receiver {
 		}
 	}
 	
+	//Chama via socket (de preferência UDP) o outro processo para tratar os dados
 	private void run(String host, int port, InputStream in) {
 		//Implementar a chamada para outro processo
 	}

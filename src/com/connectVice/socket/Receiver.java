@@ -1,7 +1,6 @@
 package com.connectVice.socket;
 
-import com.connectVice.server.Request;
-
+//Interface para criar socket Receiver
 public interface Receiver {
 	
 	void start();
